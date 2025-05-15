@@ -1,8 +1,10 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import connectDB from './config/db.js';
 import cors from 'cors';
 import dotenv from 'dotenv';
 dotenv.config();
+connectDB();
 import userRoutes from './routes/user.routes.js';
 import authRoutes from './routes/auth.routes.js';
 const app = express();
